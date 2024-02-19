@@ -1,0 +1,21 @@
+# Dependabot dependency version checks / updates
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    # Workflow files stored in the
+    # default location of `.github/workflows`
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      # Only run dependabot after all compatible upgrades and transitive deps
+      # are done to reduce amount of PRs opened.
+      interval: "weekly"
+      day: "saturday"
+    groups:
+      deps:
+        patterns:
+          - "*"
