@@ -57,7 +57,22 @@ jobs:
 
     - run: cargo clippy --no-deps
 
+  fuzz:
+    runs-on: ubuntu-latest
 
+    steps:
+    - uses: actions/checkout@v4
+
+    - run: rustup toolchain install nightly --profile minimal --no-self-update
+
+    - uses: taiki-e/install-action@v2
+      with:
+        tool: cargo-fuzz
+
+    - uses: Swatinem/rust-cache@v2
+
+    - run: |
+      cargo +nightly fuzz run parser --careful --jobs $(nproc) -- -max_total_time=60
 
   # Dummy job to have a stable name for the "all tests pass" requirement
   tests-pass:
@@ -65,6 +80,7 @@ jobs:
     needs:
     - test
     - lint
+    - fuzz
     if: always() # always run even if dependencies fail
     runs-on: ubuntu-latest
     steps:
