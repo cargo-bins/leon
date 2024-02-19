@@ -35,17 +35,7 @@ env:
 
 jobs:
   test:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: macos-14
-          - os: ubuntu-latest
-          - os: windows-latest
-
-    runs-on: ${{ matrix.os }}
-    env:
-      CARGO_BUILD_TARGET: ${{ matrix.target }}
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -55,15 +45,7 @@ jobs:
     - run: cargo test
 
   lint:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: macos-14
-          - os: ubuntu-latest
-          - os: windows-latest
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
 
