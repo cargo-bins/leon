@@ -8,6 +8,7 @@ documentation = "https://docs.rs/leon-macros"
 rust-version = "1.61.0"
 authors = ["Félix Saparelli <felix@passcod.name>", "Jiahao XU Jiahao_XU@outlook"]
 license = "Apache-2.0 OR MIT"
+readme = "../../README.md"
 
 [lib]
 proc-macro = true
