@@ -19,3 +19,27 @@ updates:
       deps:
         patterns:
           - "*"
+
+  - package-ecosystem: "cargo"
+    directory: "/crates/leon/fuzz"
+    schedule:
+      # Only run dependabot after all compatible upgrades and transitive deps
+      # are done to reduce amount of PRs opened.
+      interval: "weekly"
+      day: "saturday"
+    groups:
+      deps:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "cargo"
+    directory: "/crates/leon/benches"
+    schedule:
+      # Only run dependabot after all compatible upgrades and transitive deps
+      # are done to reduce amount of PRs opened.
+      interval: "weekly"
+      day: "saturday"
+    groups:
+      deps:
+        patterns:
+          - "*"
