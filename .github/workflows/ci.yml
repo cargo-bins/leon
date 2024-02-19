@@ -63,7 +63,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - run: rustup toolchain install nightly --profile minimal --no-self-update
+    - run: rustup toolchain install nightly --profile minimal --no-self-update --component rust-src
 
     - uses: taiki-e/install-action@v2
       with:
