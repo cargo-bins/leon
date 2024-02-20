@@ -71,7 +71,7 @@ jobs:
 
     - uses: Swatinem/rust-cache@v2
       with:
-        workspace: ". -> target\ncrates/leon/fuzz -> target"
+        workspaces: ". -> target\ncrates/leon/fuzz -> target"
 
     - run: |
         cd crates/leon/fuzz && cargo +nightly fuzz run parser --careful --jobs $(nproc) -- -max_total_time=60
