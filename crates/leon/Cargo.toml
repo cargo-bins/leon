@@ -12,8 +12,8 @@ exclude = ["fuzz", "benches"]
 readme = "../../README.md"
 
 [dependencies]
-clap = { version = "4.4.8", features = ["derive"], optional = true }
-miette = { version = "7.0.0", default-features = false, features = ["derive"], optional = true }
+clap = { version = "4.5.2", features = ["derive"], optional = true }
+miette = { version = "7.2.0", default-features = false, features = ["derive"], optional = true }
 thiserror = "1.0.52"
 
 [features]
