@@ -70,7 +70,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - run: rustup toolchain install nightly --profile minimal --no-self-update --component rust-src
+    - run: |
+        rustup toolchain install nightly --profile minimal --no-self-update --component rust-src
+        sudo apt-get update
+        sudo apt-get install -y musl-tools
+        sudo ln -s /usr/bin/g++ /usr/bin/musl-g++
 
     - uses: taiki-e/install-action@v2
       with:
@@ -80,8 +84,10 @@ jobs:
       with:
         workspaces: ". -> target\ncrates/leon/fuzz -> target"
 
-    - run: |
-        cd crates/leon/fuzz && cargo +nightly fuzz run parser --careful --jobs $(nproc) -- -max_total_time=60
+    - run: cargo +nightly fuzz run parser --careful --jobs $(nproc) -- -max_total_time=60
+      working-directory: crates/leon/fuzz
+      env:
+        RUSTFLAGS: -C target-feature=-crt-static
 
   # Dummy job to have a stable name for the "all tests pass" requirement
   tests-pass:
