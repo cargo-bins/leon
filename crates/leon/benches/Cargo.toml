@@ -7,7 +7,7 @@ edition = "2021"
 [dependencies]
 leon = { path = ".." }
 criterion = { version = "0.5.1", default-features = false, features = ["cargo_bench_support"] }
-serde = { version = "1.0.210", features = ["derive"] }
+serde = { version = "1.0.215", features = ["derive"] }
 tinytemplate = "1.2.1"
 
 # Prevent this from interfering with workspaces
