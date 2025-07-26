@@ -6,7 +6,7 @@ edition = "2021"
 
 [dependencies]
 leon = { path = ".." }
-criterion = { version = "0.6.0", default-features = false, features = ["cargo_bench_support"] }
+criterion = { version = "0.7.0", default-features = false, features = ["cargo_bench_support"] }
 serde = { version = "1.0.219", features = ["derive"] }
 tinytemplate = "1.2.1"
 
