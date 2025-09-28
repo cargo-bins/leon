@@ -72,22 +72,16 @@ jobs:
 
     - run: |
         rustup toolchain install nightly --profile minimal --no-self-update --component rust-src
-        sudo apt-get update
-        sudo apt-get install -y musl-tools
-        sudo ln -s /usr/bin/g++ /usr/bin/musl-g++
-
-    - uses: taiki-e/install-action@v2
-      with:
-        tool: cargo-fuzz
 
     - uses: Swatinem/rust-cache@v2
       with:
         workspaces: ". -> target\ncrates/leon/fuzz -> target"
 
+    # installing cargo-fuzz from binstall requires musl instead of gnu
+    - run: cargo install cargo-fuzz
+
     - run: cargo +nightly fuzz run parser --careful --jobs $(nproc) -- -max_total_time=60
       working-directory: crates/leon/fuzz
-      env:
-        RUSTFLAGS: -C target-feature=-crt-static
 
   # Dummy job to have a stable name for the "all tests pass" requirement
   tests-pass:
