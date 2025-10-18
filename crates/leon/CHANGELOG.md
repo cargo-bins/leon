@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.3](https://github.com/cargo-bins/leon/compare/leon-v3.0.2...leon-v3.0.3) - 2025-10-18
+
+### Other
+
+- Bump the deps group with 6 updates ([#142](https://github.com/cargo-bins/leon/pull/142))
+
 ## [3.0.2](https://github.com/cargo-bins/leon/compare/leon-v3.0.1...leon-v3.0.2) - 2024-11-09
 
 ### Other
