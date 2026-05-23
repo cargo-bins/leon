@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4](https://github.com/cargo-bins/leon/compare/leon-macros-v1.0.3...leon-macros-v1.0.4) - 2026-05-23
+
+### Other
+
+- *(deps)* Bump the deps group with 5 updates ([#215](https://github.com/cargo-bins/leon/pull/215))
+- Bump the deps group with 6 updates ([#142](https://github.com/cargo-bins/leon/pull/142))
+
 ## [1.0.3](https://github.com/cargo-bins/leon/compare/leon-macros-v1.0.2...leon-macros-v1.0.3) - 2024-11-09
 
 ### Other
