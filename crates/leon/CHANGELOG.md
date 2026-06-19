@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.3](https://github.com/cargo-bins/leon/compare/leon-v3.0.2...leon-v3.0.3) - 2026-06-19
+
+### Other
+
+- *(deps)* Bump libfuzzer-sys in /crates/leon/fuzz in the deps group ([#220](https://github.com/cargo-bins/leon/pull/220))
+- *(deps)* Bump clap from 4.5.60 to 4.6.1 in the deps group ([#218](https://github.com/cargo-bins/leon/pull/218))
+- *(deps)* Bump libfuzzer-sys in /crates/leon/fuzz in the deps group ([#213](https://github.com/cargo-bins/leon/pull/213))
+- *(deps)* Bump criterion in /crates/leon/benches in the deps group ([#214](https://github.com/cargo-bins/leon/pull/214))
+- *(deps)* Bump the deps group with 5 updates ([#215](https://github.com/cargo-bins/leon/pull/215))
+- *(deps)* Bump criterion in /crates/leon/benches in the deps group ([#153](https://github.com/cargo-bins/leon/pull/153))
+- Bump serde in /crates/leon/benches in the deps group ([#141](https://github.com/cargo-bins/leon/pull/141))
+- Bump the deps group with 6 updates ([#142](https://github.com/cargo-bins/leon/pull/142))
+
 ## [3.0.2](https://github.com/cargo-bins/leon/compare/leon-v3.0.1...leon-v3.0.2) - 2024-11-09
 
 ### Other
